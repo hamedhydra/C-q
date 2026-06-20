@@ -1,0 +1,388 @@
+#include <iostream>
+#include <cmath>
+#include <algorithm>
+using namespace std;
+#define PI 3.14
+int main()
+{
+    /*string j;
+    getline(cin,j);
+    cout << j;
+
+    *****************************
+
+    /*char h;
+    cin >> h;
+    cout << (int)h;
+
+    *****************************
+
+    int lenght , width;
+    cin >> lenght >> width;
+    cout << lenght * width;
+
+    *****************************
+
+    float r;
+    cin >> r;
+    cout << PI * r * r;
+
+    ****************************
+
+    float num;
+    cin >> num;
+    cout << sqrt(num);
+
+    //***************************
+
+    int a , b;
+    cin >> a >> b;
+    cout << (a > b) << endl;
+    cout << a*a << " " << b*b;
+
+    //****************************
+
+    string name;
+    int age;
+    cin >> name >> age;
+    cout << "Hello " << name << " you are "<< age << " years old.";
+
+    //****************************
+
+    cout << sizeof(int);
+
+    //***************************
+
+    string text;
+    getline(cin, text);
+    cout << text.length();
+
+    //***************************
+
+    float r;
+    cin >> r;
+    cout << PI * r * r;
+
+    //***************************
+
+    int x;
+    cin >> x;
+    cout << ~x+1;
+
+    //**************************
+
+    float a, b, c;
+    cin >> a >> b >> c;
+    cout << (a + b + c) /3;
+
+    //*************************
+
+    int a , b;
+    cin >> a >> b;
+    if (a < b)
+        cout << a;
+    else
+        cout << b;
+
+    //**********************
+
+    int a , b , c;
+    cin >> a >> b >> c;
+    if (a >= b && a >= c)
+        cout << a;
+    else if (b >= a && b >= c)
+        cout << c;
+    else
+        cout << c;
+
+    //***********************
+
+    int x = 5;
+    cout << (x == 5);
+
+    //***********************
+
+    int a , b , c;
+    cin >> a >> b >> c;
+    int max = ( a > b) ? ((a > c) ? a:c ):
+        ((b>c) ? b:c);
+
+        cout << max;
+
+    //************************
+
+    double deg;
+    cin >> deg;
+    double rad = deg * PI / 180;
+    cout << sin(rad);
+
+    //*************************
+
+    string pass;
+    cin >> pass;
+
+    if (pass.length() < 8)
+        cout << "Your password is too short";
+    else
+        cout << "Ok";
+
+    //****************************
+
+    double x;
+    cin >> x;
+    cout << round(x);
+
+    //******************************
+
+    int a , b;
+    cin >> a >> b;
+    cout << (a & b) << endl;
+    cout << (a | b);
+
+    //******************************
+
+    int a , f;
+    cin >> a >> f;
+
+    cout << a * f << endl;
+    cout << a % f;
+
+    //*********************************
+
+    unsigned int g;
+    cin >> g;
+    cout << g;
+
+    //***********************************
+
+    cout << "Never Explain, Never Complain";
+
+    //***********************************
+
+    cout << SHRT_MAX << endl;
+    cout << SHRT_MIN;
+
+    //*************************************
+
+    int n;
+    cin >> n;
+    while(n > 0) {
+        cout << n % 10 << " ";
+        n /= 10;
+
+
+    }
+
+    //**************************
+
+    cout << "C:\\Folder";
+
+    //*************************
+
+    int n;
+    string text;
+
+    cin >> n;
+    cin.ignore();
+
+    getline(cin , text);
+    cout << n << " " <<text;
+
+    //*****************************
+
+    int n;
+    cin >> n;
+    cout << (n >= 0 ? "Positive" : "Negative");
+
+    //****************************
+
+    int n;
+    cin >> n;
+    for(int i = 1 ; i <= 10 ; i++){
+        cout << i << "x" << n <<"=" << i*n <<endl;
+    }
+
+    //*****************************
+
+    char k;
+    cin >> k;
+    if (k >= 'A' && k <= 'Z')
+        cout << "Uppercase";
+        else
+            cout << "Lowercase";
+
+    //*****************************
+
+    string n;
+    cin >> n;
+
+    reverse(n.begin(), n.end());
+
+    cout << n;
+
+    //****************************
+
+    int a , b;
+    cin >> a >> b;
+
+    cout << "Sum= " << a+b <<endl;
+    cout << "T= " << a-b <<endl;
+    cout << "Z= " << a*b <<endl;
+    cout << "Taq= " << a/b;
+
+    //*****************************
+
+    cout << "He said \"Never give up!!!\"";
+
+    //********************************
+
+    cout << "\a";
+
+    //*********************************
+
+    cout << "A\tB\tC";
+
+    //********************************
+
+    int n;
+    cin >> n;
+
+    switch(n){
+        case 0: cout << "Zero"; break;
+        case 1: cout << "One"; break;
+        case 2: cout << "Two"; break;
+        case 3: cout << "Tree"; break;
+        case 4: cout << "Four"; break;
+        case 5: cout << "Five"; break;
+        default: cout <<"invalid";
+
+    }
+
+    //*********************************
+
+    int d,f;
+    cin >> d >> f;
+
+    cout << d*d + f*f;
+
+    //*******************************
+
+    int h;
+    cin>> h;
+    cout << h % 3;
+
+    //*********************************
+
+    string d;
+    cin >> d;
+    cout << d[2];
+
+    //*****************************
+
+    int a , b;
+    cin >> a >> b;
+
+    if (a > 0 && b > 0)
+        cout << "Both positive";
+    else
+        cout << "Not both positive";
+
+    //*******************************
+
+    int a, b, c, d;
+    cin >> a >> b >> c >>d;
+    float avg1 = (a + b) / 2.0;
+    float avg2 = (c + d) / 2.0;
+
+    cout << "Avg first two = " avg1 <<endl;
+    cout << "Avg last two = " avg2 <<endl;
+
+    if (avg2 > avg1)
+        cout << "last two larger ";
+    else
+        cout<< "first two larger ";
+
+    //****************************************
+
+    cout << sizeof(int) * 8;
+
+    //**********************************
+
+    int a, b, c;
+    cin >> a >> b >> c;
+    bool result = (a < b && b < c) || (c < a);
+    cout << result;
+
+    //**********************************
+
+    int a , b;
+    cin >> a >> b;
+    if (b==0)
+        cout << "Error";
+    else
+        cout << a / b;
+
+    //**************************************
+
+    double a , b;
+    cin >> a >> b;
+
+    cout << fmod(a , b);
+
+    //********************************
+
+    short int x = 40000;
+    cout << x;
+
+    //***********************************
+
+    int a;
+    double b;
+
+    cin >> a >> b;
+
+    cout << abs(a) << endl;
+    cout << fabs(b);
+
+    //*******************************
+
+    float a , b , c;
+    cin >> a >> b >> c;
+    cout << (a , b , c)/3;
+
+    //*********************************
+
+    cout << "Line1\n Line2\n";
+    cout << "Tap\tSpace\n";
+    cout << "Backslash: \\\n";
+    cout << "Backspace test\b!\n";
+
+    //**********************************
+
+    long int x = 100000;
+    cout << x;
+
+    //********************************
+
+    cout << "Teacher Profile\n";
+    cout << "Name: Parwiz\n";
+    cout << "Field: Computer Science\n";
+    cout << "Exprience: 10 years\n";
+    cout << "Teaching Skill: Excellent\n";
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
